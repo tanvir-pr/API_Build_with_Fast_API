@@ -92,6 +92,7 @@ def test_update_transaction():
 
     missing = client.put('/transactions/9999', json={'title': 'Missing'})
     assert missing.status_code == status.HTTP_404_NOT_FOUND
+    
 
 
 def test_delete_transaction():
@@ -101,3 +102,4 @@ def test_delete_transaction():
 
     missing = client.delete('/transactions/9999')
     assert missing.status_code == status.HTTP_404_NOT_FOUND
+    
